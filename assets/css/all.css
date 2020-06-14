@@ -1,0 +1,238 @@
+/* Estilos personalizados */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@-ms-viewport {
+  width: device-width;
+}
+article,
+aside,
+dialog,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section {
+  display: block;
+}
+body {
+  margin: 0;
+  font-family: 'Questrial', "Helvetica", "Arial", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #808080;
+  text-align: left;
+  background-color: #fafafa;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+a {
+	color: #ff5672;
+}
+a:hover {
+	text-decoration: none;
+	color: #edeeee;
+}
+.color-1 {
+	color: #ff5672 !important;
+}
+.navbar-nav li.active {
+	background-color: #ff5672 !important;
+}
+.navbar-nav li.active a {
+	color: #ffffff !important;
+}
+
+/* Parte central de la pagina Landing*/
+.page-header .title {
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+}
+.page-header .title, .page-header .info-title {
+	color: #fff;
+}
+.page-header {
+	height: 80vh;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: flex;
+	align-items: center;
+}
+.header-filter {
+	position: relative;
+}
+.header-filter:before,
+.header-filter:after {
+	position: absolute;
+	z-index: 1;
+	width: 100%;
+	height: 100%;
+	display: block;
+	left: 0;
+	top: 0;
+	content: "";
+}
+.header-filter::before {
+	background: rgba(255, 86, 115, .8);
+}
+.header-filter .container {
+	z-index: 2;
+	position: relative;
+}
+.galeria a {
+	color: #ff5672;
+	font-size: 18px;
+}
+.galeria a:hover, .galeria a:focus {
+	color: rgba(255, 86, 115, .9);
+	box-shadow: none;
+}
+/*Efecto hover para las imagenes*/
+figure.card {
+	font-family: 'Questrial', Arial, sans-serif;
+	color: #fff;
+	width: 99.9%;
+	background-color: rgba(255, 86, 115, 1);
+	text-align: center;
+}
+figure.card img {
+	opacity: 1;
+	width: 100%;
+	-webkit-transition: opacity 0.2s;
+	transition: opacity 0.2s;
+}
+figure.card figcaption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 3em 3em;
+	width: 100%;
+	height: 100%;
+}
+figure.card figcaption::before {
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	bottom: 50%;
+	left: 30px;
+	content: '';
+	opacity: 0;
+	background-color: #ffffff;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+figure.card h5,
+figure.card p {
+	margin: 0 0 5px;
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.2s;
+	transition: opacity 0.2s,-webkit-transform 0.2s,-moz-transform 0.2s,-o-transform 0.2s,transform 0.2s;
+}
+figure.card h5 {
+	word-spacing: -0.15em;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+	-webkit-transform: translate3d(0%, 50%, 0);
+	transform: translate3d(0%, 50%, 0);
+	-webkit-transition-delay: 0.3s;
+	transition-delay: 0.3s;
+}
+figure.card hr {
+	opacity: 0;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+figure.card p {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+figure.card:hover img {
+	opacity: 0.2;
+}
+figure.card:hover figcaption h5 {
+	opacity: 1;
+	-webkit-transform: translate3d(0%, 0%, 0);
+	transform: translate3d(0%, 0%, 0);
+	-webkit-transition-delay: 0.2s;
+	transition-delay: 0.2s;
+}
+figure.card:hover figcaption hr {
+	opacity: 1;
+	border: 1px solid #ffffff;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+figure.card:hover figcaption p {
+	opacity: 0.9;
+	-webkit-transition-delay: 0.6s;
+	transition-delay: 0.6s;
+}
+figure.card:hover figcaption::before {
+	background: rgba(255, 255, 255, 0);
+	opacity: 1;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+
+/*Redes sociales*/
+.btn-bg {
+	color: #ffffff;
+	background-color: #ff5672;
+	border-color: #ff5672;
+}
+.nav a {
+	color: #808080 !important;
+}
+.nav a.active {
+	background-color: #ff5672 !important;
+	color: #ffffff !important;
+}
+.footer {
+	margin: 70px 0; 
+}
+.footer a:hover {
+	color: rgba(255, 86, 115, .9);
+}
+.redes-sociales a {
+	color: #808080;
+	border: 0;
+	font-size: 18px;
+}
+.redes-sociales a:hover,.redes-sociales a:focus {
+	box-shadow: none;
+}
